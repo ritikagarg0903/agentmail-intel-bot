@@ -16,6 +16,12 @@ researches any prospect when you forward their email.
    - A suggested response draft
    - Urgency rating
 
+### Smart Email Handling
+
+- **Forwarded emails**: Parses Gmail, Outlook, and Apple Mail forwarding formats to extract the original sender's domain for research
+- **Direct emails**: Also handles emails sent directly to the agent
+- **Generic email domains**: When the sender uses `@gmail.com`, `@yahoo.com`, etc., the agent extracts company mentions from the email body instead of researching the email provider
+
 ## Architecture
 
 ```
@@ -37,13 +43,15 @@ researches any prospect when you forward their email.
 ### 1. Clone the repo
 
 ```bash
-git clone <repo-url>
-cd prospect-intel-agent
+git clone https://github.com/ritikagarg0903/agentmail-intel-bot.git
+cd agentmail-intel-bot
 ```
 
-### 2. Install dependencies
+### 2. Create a virtual environment and install dependencies
 
 ```bash
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 ```
 
@@ -54,10 +62,9 @@ pip install -r requirements.txt
 
 ### 4. Configure environment
 
-Copy `.env` and add your real keys:
+Create a `.env` file with your keys:
 
 ```bash
-# Edit .env with your keys
 AGENTMAIL_API_KEY=am_us_your_real_key
 GEMINI_API_KEY=your_real_gemini_key
 ```
@@ -75,7 +82,7 @@ You should see:
 ⏱️  Polling every 10 seconds
 ---
 ✅ Found existing inbox: ritika-ai@agentmail.to
-🆔 Inbox ID: ...
+🆔 Inbox ID: ritika-ai@agentmail.to
 📧 Send emails to: ritika-ai@agentmail.to
 
 🔄 Polling for new messages...
@@ -96,20 +103,17 @@ prospect-intel-agent/
 ├── config.py             # Configuration constants
 ├── requirements.txt      # Dependencies
 ├── .env                  # API keys (not committed)
+├── .gitignore            # Excludes .env, venv, __pycache__
 └── README.md             # This file
 ```
 
 ## Tech Stack
 
 - **Email Infrastructure**: [AgentMail](https://agentmail.to) — email inbox API for AI agents
-- **AI/LLM**: [Google Gemini 2.0 Flash](https://aistudio.google.com) — free tier, fast & capable
+- **AI/LLM**: Google Gemini 3.6 Flash — free tier, fast & capable
 - **Language**: Python 3.10+
 - **No server needed**: Uses polling (no webhooks, no ngrok, no deployment)
 
 ## Built By
 
 **Ritika Garg** · M.S. Business Analytics, UC Davis
-- Portfolio: [ritika-projects-portfolio.streamlit.app](https://ritika-projects-portfolio.streamlit.app)
-
-Built for AgentMail interview demo — demonstrating product understanding,
-AI automation skills, and GTM operations thinking.
