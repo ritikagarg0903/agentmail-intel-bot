@@ -1,0 +1,16 @@
+# Secret keys
+.env
+
+# Virtual environment
+venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Test files
+test_quality.py
+
+# OS
+.DS_Store
