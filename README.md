@@ -16,6 +16,16 @@ researches any prospect when you forward their email.
    - A suggested response draft
    - Urgency rating
 
+## Demo
+
+### Forward an email → Get an intel brief back
+
+![Email flow showing forwarded email and intel brief reply](screenshots/email_flow.png)
+
+### The full intel brief
+
+![Detailed prospect intel brief with company info, insights, and suggested response](screenshots/prospect.png)
+
 ### Smart Email Handling
 
 - **Forwarded emails**: Parses Gmail, Outlook, and Apple Mail forwarding formats to extract the original sender's domain for research
