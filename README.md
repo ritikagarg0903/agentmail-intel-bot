@@ -31,7 +31,7 @@ researches any prospect when you forward their email.
 ```
 ┌─────────────────────┐     ┌──────────────────────────┐     ┌──────────────────┐
 │  User forwards      │     │  Python Script (polling)  │     │  Google Gemini   │
-│  email to           │────▶│                            │────▶│  API (free)      │
+│  email to           │────▶│                            │────▶│  API             │
 │  ritika-ai@         │     │  1. Poll for new messages  │     │                  │
 │  agentmail.to       │     │  2. Parse forwarded email  │     │  Generate intel  │
 │                     │     │  3. Extract sender domain  │     │  brief           │
@@ -62,7 +62,7 @@ pip install -r requirements.txt
 ### 3. Get your API keys
 
 - **AgentMail**: Sign up at [agentmail.to](https://agentmail.to) and get your API key
-- **Google Gemini** (free): Get a key at [aistudio.google.com/apikey](https://aistudio.google.com/apikey)
+- **Google Gemini**: Get a key at [aistudio.google.com/apikey](https://aistudio.google.com/apikey)
 
 ### 4. Configure environment
 
@@ -114,7 +114,7 @@ prospect-intel-agent/
 ## Tech Stack
 
 - **Email Infrastructure**: [AgentMail](https://agentmail.to) — email inbox API for AI agents
-- **AI/LLM**: Google Gemini 3.6 Flash — free tier, fast & capable
+- **AI/LLM**: Google Gemini 3.6 Flash
 - **Language**: Python 3.10+
 - **No server needed**: Uses polling (no webhooks, no ngrok, no deployment)
 
