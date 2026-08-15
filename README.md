@@ -18,13 +18,7 @@ researches any prospect when you forward their email.
 
 ## Demo
 
-### Forward an email → Get an intel brief back
-
-![Email flow showing forwarded email and intel brief reply](screenshots/email_flow.png)
-
-### The full intel brief
-
-![Detailed prospect intel brief with company info, insights, and suggested response](screenshots/prospect.png)
+![Prospect Intel Agent demo](agentmail-prospect-ai.gif)
 
 ### Smart Email Handling
 
